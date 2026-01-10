@@ -1,0 +1,19 @@
+{
+  "name": "vacation_rentals_agent",
+  "url": "http://localhost:8001",
+  "description": "A vacation rental customer service agent for policy questions and guidance",
+  "version": "1.0.0",
+  "capabilities": {
+    "streaming": true
+  },
+  "defaultInputModes": ["text/plain"],
+  "defaultOutputModes": ["text/plain"],
+  "skills": [
+    {
+      "id": "vacation-rental-support",
+      "name": "Vacation Rental Support",
+      "description": "Answer questions about cancellation policies and refunds",
+      "tags": ["vacation-rental", "customer-service", "policy"]
+    }
+  ]
+}
