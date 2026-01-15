@@ -1,7 +1,7 @@
 """
 Vacation Rentals agent using LiteLLM with Nebius TokenFactory API.
 
-This agent uses the openai/gpt-oss-120b model hosted on Nebius TokenFactory,
+This agent uses the deepseek-ai/DeepSeek-V3-0324-fast model hosted on Nebius TokenFactory,
 accessed via LiteLLM's native Nebius provider.
 
 Authentication:
@@ -70,7 +70,7 @@ Full refunds are provided regardless of cancellation policy when cancellation is
 
 def create_agent() -> LlmAgent:
     """
-    Create an ADK agent configured with openai/gpt-oss-120b via LiteLLM.
+    Create an ADK agent configured with deepseek-ai/DeepSeek-V3-0324-fast via LiteLLM.
 
     Uses the Nebius TokenFactory API endpoint with the NEBIUS_API_KEY
     environment variable for authentication.
@@ -85,7 +85,7 @@ def create_agent() -> LlmAgent:
     api_key = os.getenv("NEBIUS_API_KEY")
 
     # Model can be overridden via environment variable
-    model_name = os.getenv("VR_AGENT_MODEL", "openai/gpt-oss-120b")
+    model_name = os.getenv("VR_AGENT_MODEL", "deepseek-ai/DeepSeek-V3-0324-fast")
 
     # LiteLLM uses "nebius/" prefix for Nebius provider
     litellm_model = f"nebius/{model_name}"
